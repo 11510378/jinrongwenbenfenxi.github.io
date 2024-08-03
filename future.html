@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>展望未来</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #444;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #666;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+        .applications ul {
+            list-style-type: square;
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        .applications ul li {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>展望未来</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">主页</a></li>
+            <li><a href="{{ url_for('features') }}">文本特征</a></li>
+            <li><a href="{{ url_for('lda_bow') }}">LDA与词袋模型</a></li>
+            <li><a href="{{ url_for('thanks') }}">感谢</a></li>
+            <li><a href="{{ url_for('future') }}">展望未来</a></li>
+            <li><a href="{{ url_for('contact') }}">联系我们</a></li>
+            <li><a href="{{ url_for('about') }}">关于我们</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>金融科技前瞻</h2>
+            <p>金融科技正在迅速发展。通过融合人工智能算法与大数据，金融科技在提升服务效率和服务质量方面展现出了巨大的潜力。</p>
+        </section>
+        <section class="applications">
+            <h2>金融领域的科技应用</h2>
+            <p>以下是一些当前和未来在金融领域中重要的科技应用：</p>
+            <ul>
+                <li><strong>反欺诈：</strong> 利用大数据进行检测和预防欺诈行为。</li>
+                <li><strong>借贷金融：</strong> 使用人工智能算法和大数据评估借贷信用风险，做好效益与风险两手抓。</li>
+                <li><strong>个人智能投资顾问：</strong> 为投资者提供个性化的投资建议。</li>
+                <li><strong>自动财务分析：</strong> 自动处理财务报告，提取财务信息，降低各方信息使用门槛。</li>
+            </ul>
+        </section>
+        <section>
+            <h2>展望未来</h2>
+            <p>未来，金融科技将随着技术发展而不断进步，我们可以期待更多创新的应用场景和解决方案，带来更高效、更智能的金融服务。</p>
+        </section>
+    </main>
+    <footer>
+        <p>企业年报文本数据挖掘系统. V1.0</p>
+    </footer>
+</body>
+</html>
