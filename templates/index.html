@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎页面</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #343a40;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #495057;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        section h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            font-size: 2rem;
+            color: #007bff;
+        }
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 1rem 0;
+        }
+        .features {
+            background-color: #e9ecef;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        .features h3 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .features ul li {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background-color: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .features .sub-item {
+            margin-left: 1.5rem;
+            font-size: 1rem;
+        }
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎使用企业年报文本数据挖掘系统 V1.0</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">主页</a></li>
+            <li><a href="{{ url_for('features') }}">文本特征</a></li>
+            <li><a href="{{ url_for('lda_bow') }}">LDA与词袋模型</a></li>
+            <li><a href="{{ url_for('thanks') }}">感谢</a></li>
+            <li><a href="{{ url_for('future') }}">展望未来</a></li>
+            <li><a href="{{ url_for('contact') }}">联系我们</a></li>
+            <li><a href="{{ url_for('about') }}">关于我们</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>欢迎访问我们的系统!</h2>
+            <p>欢迎使用我们的企业年报文本数据挖掘系统。我们致力于为您提供全面的分析工具和报告，帮助您深入了解企业年报数据。</p>
+            <p>浏览我们的功能页面以了解更多信息。</p>
+        </section>
+        <section>
+            <h2>企业年报文本数据挖掘系统 V1.0</h2>
+            <div class="features">
+                <h3>系统特色</h3>
+                <ul>
+                    <li>数据清洗
+                        <ul class="sub-item">
+                            <li>数据定位</li>
+                            <li>中文文本预处理</li>
+                        </ul>
+                    </li>
+                    <li>数据分析
+                        <ul class="sub-item">
+                            <li>数据可视化</li>
+                            <li>主题挖掘</li>
+                        </ul>
+                    </li>
+                    <li>数据特征挖掘
+                        <ul class="sub-item">
+                            <li>文本可读性</li>
+                            <li>文本情绪</li>
+                        </ul>
+                    </li>
+                    <li>企业数据分析
+                        <ul class="sub-item">
+                            <li>年报主题挖掘</li>
+                            <li>PMC值衡量企业同业竞争</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2024 企业年报文本数据挖掘系统 V1.0</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDA与词袋模型</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>LDA与词袋模型</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">主页</a></li>
+            <li><a href="{{ url_for('features') }}">文本特征</a></li>
+            <li><a href="{{ url_for('lda_bow') }}">LDA与词袋模型</a></li>
+            <li><a href="{{ url_for('thanks') }}">感谢</a></li>
+            <li><a href="{{ url_for('future') }}">展望未来</a></li>
+            <li><a href="{{ url_for('contact') }}">联系我们</a></li>
+            <li><a href="{{ url_for('about') }}">关于我们</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>LDA与词袋模型</h2>
+            <article>
+                <h3>LDA（潜在狄利克雷分配）</h3>
+                <p>LDA是一种主题建模技术，用于发现文档集合中潜在的主题结构。LDA假设每个文档由若干主题构成，而每个主题又由若干单词构成。</p>
+            </article>
+            <article>
+                <h3>词袋模型</h3>
+                <p>词袋模型是一种文本表示方法，通过忽略上下文语义信息，仅考虑词频来表示文档。</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>2024 企业年报文本数据挖掘系统.V1.0</p>
+    </footer>
+</body>
+</html>
